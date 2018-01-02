@@ -1,0 +1,55 @@
+// プラグイン
+apply plugin: 'org.springframework.boot'
+
+// 設定
+configurations {
+    myBatisGenerator
+}
+
+// 依存関係
+dependencies {
+
+    // --------------------------------
+    // OSS
+    // --------------------------------
+    compile("org.springframework.boot:spring-boot-starter-web")
+
+
+    // --------------------------------
+    // Framework
+    // --------------------------------
+    //compile project(":framework:framework-frontend-api")
+
+    // --------------------------------
+    // プロジェクト内
+    // --------------------------------
+    compile project(":modules:swagger:frontend-api-server")
+    //compile project(":modules:swagger:frontend-api-client")
+
+    // --------------------------------
+    // テスト
+    // --------------------------------
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    // --------------------------------
+    // 開発効率化
+    // --------------------------------
+    compileOnly('org.projectlombok:lombok')
+    myBatisGenerator("org.mybatis.generator:mybatis-generator-core:${myBatisGeneratorVersion}")
+    myBatisGenerator("mysql:mysql-connector-java:${mySqlConnectorVersion}")
+
+}
+
+// MyBatisGenerator
+task generateMyBatisCode(type: JavaExec) {
+    classpath = configurations.myBatisGenerator
+    main = 'org.mybatis.generator.api.ShellRunner'
+    args = [
+            '-configfile',
+            "${project.file('generatorConfig.xml')}",
+            '-overwrite'
+    ]
+}
+generateMyBatisCode.group = 'mybatis generator'
+
+compileJava.dependsOn ":swagger:frontend-api-server:generateSwaggerCode",":swagger:frontend-api-client:generateSwaggerCode"

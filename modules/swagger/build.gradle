@@ -1,0 +1,120 @@
+plugins {
+    id 'org.hidetake.swagger.generator' version '2.9.0'
+}
+
+// ルートプロジェクトのext
+// def rootExt = rootProject.extensions.getByName('ext')
+
+// 全サブプロジェクト共通
+subprojects {
+
+    // プラグイン設定
+    apply plugin: 'org.hidetake.swagger.generator'
+
+    // 依存関係
+    dependencies {
+
+        compile('org.springframework.boot:spring-boot-starter-web')
+        compile("io.swagger:swagger-annotations:${swaggerAnnotationVersion}")
+        compile("io.springfox:springfox-swagger2:${springfoxVersion}")
+
+        // SwaggerCodegen
+        swaggerCodegen "io.swagger:swagger-codegen-cli:${swaggerCodegenVersion}"
+
+        // SwaggerUI
+        swaggerUI "org.webjars:swagger-ui:${swaggerUIVersion}"
+    }
+
+}
+
+// サーバーサイドプロジェクトのみ
+project('frontend-api-server') {
+
+    swaggerSources {
+        frontendApiV1 {
+
+            // 仕様定義YAML
+            inputFile = parent.file('frontend-api-v1.0.0.yaml')
+
+            // SwaggerUI
+            ui {
+                options.docExpansion = 'full'
+                outputDir = rootProject.file("docs/api/v1.0.0/swaggerui")
+                header = '''\
+                <style>#header { display: none; }</style>
+                '''.stripIndent()
+            }
+
+            // SwaggerCodeGen
+            code {
+                // Select generate langurage
+                language = 'spring'
+                // Path to the generate configuration file
+                configFile = project.file("frontend-api-v1.0.0-server-config.json")
+                // Path to the template directory
+                templateDir = parent.file('templates/JavaSpring')
+                // Validate YAML before code generation
+                dependsOn validation
+                // Generate only models and controllers
+                components = ['models', 'apis']
+            }
+
+        }
+    }
+
+    compileJava.dependsOn swaggerSources.frontendApiV1.code
+
+    // ここは書きようがあるような気がする
+    sourceSets {
+        main {
+            java {
+                srcDir "${buildDir}/swagger-code-frontendApiV1/src/main/java"
+            }
+            resources {
+                srcDir "${buildDir}/swagger-code-frontendApiV1/src/main/resources"
+            }
+        }
+    }
+    //sourceSets.main.java.srcDirs swaggerSources.frontendApiV1.code.outputDir
+}
+
+// クライアントプロジェクトのみ
+project('frontend-api-client') {
+
+    swaggerSources {
+        frontendApiV1 {
+            // 仕様定義YAML
+            inputFile = parent.file('frontend-api-v1.0.0.yaml')
+            // SwaggerCodeGen
+            code {
+                // Select generate langurage
+                language = 'java'
+                // Select generate library
+                library = 'resttemplate'
+                // Path to the generate configuration file
+                configFile = project.file("frontend-api-v1.0.0-client-config.json")
+                // Path to the template directory
+                //templateDir = parent.file('templates/Java')
+                // Validate YAML before code generation
+                dependsOn validation
+                // Generate only models and controllers
+                components = ['models', 'apis', 'supportingFiles']
+            }
+        }
+    }
+
+    compileJava.dependsOn swaggerSources.frontendApiV1.code
+
+    // ここは書きようがあるような気がする
+    sourceSets {
+        main {
+            java {
+                srcDir "${buildDir}/swagger-code-frontendApiV1/src/main/java"
+            }
+            resources {
+                srcDir "${buildDir}/swagger-code-frontendApiV1/src/main/resources"
+            }
+        }
+    }
+    //sourceSets.main.java.srcDirs swaggerSources.frontendApiV1.code.outputDir
+}

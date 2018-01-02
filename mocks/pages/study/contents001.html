@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+          integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous"/>
+
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+
+    <!-- Font Awesome -->
+    <link href="/herbu/mocks/assets/css/asciidoctor.css" rel="stylesheet" crossorigin="anonymous"/>
+
+    <title>Herbu - Study</title>
+
+    <!-- とりあえずここに書いた -->
+    <style type="text/css">
+        .tooltip-inner {
+            max-width: 500px;
+            text-align: left;
+        }
+        .footer {
+            margin-top:50px;
+            color: white;
+            background-color: gray;
+            padding-top:50px;
+            padding-bottom:50px;
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- ナビゲーションバー -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Herbu</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/herbu/mocks">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/herbu/mocks/pages/skill">Skill</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="/herbu/mocks/pages/study">Study <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/herbu/mocks/pages/ojt">OJT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="/herbu/mocks/pages/profile">Profile</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign&nbsp;In</button>
+        </form>
+    </div>
+</nav>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-3" style="padding-top:30px">
+
+            <nav class="nav flex-column">
+                <a class="nav-link active" href="#">学習コンテンツ検索</a>
+                <a class="nav-link active" href="#">コンテンツ受講状況一覧</a>
+                <a class="nav-link" href="#">QA一覧</a>
+            </nav>
+
+            <hr/>
+
+            <nav class="nav flex-column">
+                <a class="nav-link active" href="#">学習コンテンツへの問い合わせ</a>
+            </nav>
+
+            <hr/>
+
+            <nav class="nav flex-column">
+                <a class="nav-link active" href="#">チュートリアル</a>
+                <a class="nav-link" href="#">よくあるFAQ</a>
+            </nav>
+        </div>
+
+
+        <div class="col-md-9" id="main-contents" class="asciidoc-contents" style="padding-top:30px">
+            <div id="org-main-contents" style="display:none;">
+= テンプレート
+:toc: left
+:toclevel: 2
+:toc-title: 目次
+:figure-caption: 図
+:table-caption: 表
+:imagesdir: images
+:homepage: https://traningmanagementsystem.github.io/tms/
+
+
+[[見出し1]]
+== 見出し1
+基本的にアンカーで飛べるように見出しの上部に``\[[見出し]]``をつけてください。 +
+アンカーは``\<<見出し>>``で飛べるようになります。
+
+[[見出し2]]
+=== 見出し2
+[[見出し3]]
+==== 見出し3
+[[見出し4]]
+==== 見出し4
+[[見出し5]]
+==== 見出し5
+
+
+.テーブル例
+[option="header", cols="30,70"]
+|===
+|列1 |列2
+
+|行1・列1
+|行1・列2
+
+|行2・列1
+|行2・列2
+
+|===
+
+
+[[ソースコードの記述]]
+=== ソースコードの記述
+ソースコードを人に見やすいシンタックスハイライトを適用して記述することができます。
+ソースコードを記載するときは見やすさを考慮すると、4スペースやタブではなく、2スペースが良いです。
+
+[source,java]
+----
+
+public class Sample {
+
+public static void main() {
+
+System.out.println("Hello World!!!");
+
+}
+
+}
+
+----
+
+他記述方法は以下を参照してもらえるとよいです。
+http://www.venus.dti.ne.jp/~iisaka/DocSys/cheatsheet-ja/asciidoc-869/asciidoc-869.html
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <span>Copyright &copy; 2017-2018 t-zomu.com All Rights Reserved.</span>
+    </div>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+
+<!-- AsciiDoctorJ -->
+<script src="/herbu/mocks/assets/js/asciidoctor.js"></script>
+<script>
+var asciidoctor = Asciidoctor();
+var content = $('#org-main-contents').text();
+var html = asciidoctor.convert(content);
+$('#main-contents').append(html);
+</script>
+
+</body>
+</html>

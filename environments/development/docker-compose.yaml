@@ -1,0 +1,50 @@
+version: "3"
+services:
+#  swagger-editor:
+#    image: swaggerapi/swagger-editor:latest
+#    ports:
+#      - "9999:8080"
+#    networks:
+#      - frontend
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - frontend
+  database:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    hostname: dbserver
+    environment:
+        MYSQL_DATABASE: herbudb
+        MYSQL_ROOT_PASSWORD: password
+    networks:
+      - frontend
+#  gitlab:
+#    image: gitlab/gitlab-ce
+#    networks:
+#      - frontend
+  neo4j:
+    image: neo4j:latest
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    networks:
+      - frontend
+#  rest:
+#    image: openjdk:8-jdk-alpine
+#    ports:
+#     - "8081:8081"
+#    networks:
+#      - frontend
+networks:
+  frontend:
+volumes:
+  rest-data:
+  swagger-editor-data:
+  redis-data:
+  database-data:
+  gitlab-data:
+  neo4j-data:

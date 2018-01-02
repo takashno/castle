@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+          integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>Herbu - Study</title>
+
+    <!-- とりあえずここに書いた -->
+    <style type="text/css">
+        .tooltip-inner {
+            max-width: 500px;
+            text-align: left;
+        }
+        .footer {
+            margin-top:50px;
+            color: white;
+            background-color: gray;
+            padding-top:50px;
+            padding-bottom:50px;
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- ナビゲーションバー -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Herbu</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/herbu/mocks">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/herbu/mocks/pages/skill">Skill</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="/herbu/mocks/pages/study">Study <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/herbu/mocks/pages/knowledge">Knowledge</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/herbu/mocks/pages/ojt">OJT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="/herbu/mocks/pages/profile">Profile</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign&nbsp;In</button>
+        </form>
+    </div>
+</nav>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-3" style="padding-top:30px">
+
+            <nav class="nav flex-column">
+                <a class="nav-link active" href="#">学習コンテンツ検索</a>
+                <a class="nav-link active" href="#">カテゴリー検索</a>
+            </nav>
+
+            <hr/>
+
+            <nav class="nav flex-column">
+                <a class="nav-link active" href="#">コンテンツ受講状況一覧</a>
+                <a class="nav-link" href="#">QA・問い合わせ一覧</a>
+            </nav>
+
+            <hr/>
+
+            <nav class="nav flex-column">
+                <a class="nav-link active" href="#">チュートリアル</a>
+                <a class="nav-link" href="#">よくあるFAQ</a>
+            </nav>
+        </div>
+
+
+        <div class="col-md-9" style="padding-top:30px">
+            <br/>
+            <div class="alert alert-success" role="alert">
+                例：処理が正常に完了した場合のメッセージ
+            </div>
+            <div class="alert alert-danger" role="alert">
+                例：処理が異常で終了した場合のメッセージ
+            </div>
+            <div class="alert alert-warning" role="alert">
+                例：処理が異常（警告扱い）で終了した場合のメッセージ
+            </div>
+            <div class="alert alert-info" role="alert">
+                例：情報を通知するためのメッセージ
+            </div>
+            <br/>
+            <h4>新着プログラム</h4>
+            <div class="row">
+                <div class="col">
+                    <table class="table table-sm table-striped">
+                        <thead>
+                            <tr>
+                                <th>プログラム</th>
+                                <th>ジャンル</th>
+                                <th>タグ</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">ラムダ式</a></td>
+                                <td>プログラミング</td>
+                                <td>Java,Java8,Stream</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">サーバーレスアーキテクチャ</a></td>
+                                <td>システム</td>
+                                <td>AWS,Lambda,APIGateway</td>
+                            </tr>
+                            <tr>
+                                <td><a href="contents001.html">マイクロサービスアーキテクチャ</a></td>
+                                <td>システム</td>
+                                <td>REST,MSA,SpringBoot</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">DIコンテナ</a></td>
+                                <td>フレームワーク</td>
+                                <td>SpringFramework,DI</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">GCアルゴリズム</a></td>
+                                <td>プログラミング</td>
+                                <td>GC,Java,G1GC,CSMC</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a class="btn btn-info" href="#" role="button">More...</a>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <h4>人気プログラム</h4>
+            <div class="row">
+                <div class="col">
+                    <table class="table table-sm table-striped">
+                        <thead>
+                        <tr>
+                            <th>プログラム</th>
+                            <th>ジャンル</th>
+                            <th>タグ</th>
+                        </tr>
+
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="#">ラムダ式</a></td>
+                            <td>プログラミング</td>
+                            <td>Java,Java8,Stream</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">サーバーレスアーキテクチャ</a></td>
+                            <td>システム</td>
+                            <td>AWS,Lambda,APIGateway</td>
+                        </tr>
+                        <tr>
+                            <td><a href="contents001.html">マイクロサービスアーキテクチャ</a></td>
+                            <td>システム</td>
+                            <td>REST,MSA,SpringBoot</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">DIコンテナ</a></td>
+                            <td>フレームワーク</td>
+                            <td>SpringFramework,DI</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">GCアルゴリズム</a></td>
+                            <td>プログラミング</td>
+                            <td>GC,Java,G1GC,CSMC</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <a class="btn btn-info" href="#" role="button">More...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <span>Copyright &copy; 2017-2018 t-zomu.com All Rights Reserved.</span>
+    </div>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+// Root
+rootProject.name = 'herbu'
+
+// Applications
+include 'modules:frontend-api'
+include 'modules:frontend-web'
+include 'modules:database'
+
+// OpenApi
+include 'modules:swagger'
+include 'modules:swagger:frontend-api-server'
+include 'modules:swagger:frontend-api-client'
+
+// Documents
+include 'mocks'
+include 'docs'
