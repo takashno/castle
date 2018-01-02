@@ -9,27 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
           integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
-    <!-- Font Awesome -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
     <title>Herbu</title>
-
-    <!-- とりあえずここに書いた -->
-    <style type="text/css">
-        .tooltip-inner {
-            max-width: 500px;
-            text-align: left;
-        }
-        .footer {
-            margin-top:50px;
-            color: white;
-            background-color: gray;
-            padding-top:50px;
-            padding-bottom:50px;
-        }
-    </style>
-
 </head>
 <body>
 
@@ -42,8 +22,8 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/herbu/mocks">Home</a>
+            <li class="nav-item active">
+                <a class="nav-link" href="/herbu/mocks">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/herbu/mocks/pages/skill">Skill</a>
@@ -54,8 +34,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="/herbu/mocks/pages/knowledge">Knowledge</a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/herbu/mocks/pages/ojt">OJT <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="/herbu/mocks/pages/ojt">OJT</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/herbu/mocks/pages/profile">Profile</a>
@@ -68,39 +48,52 @@
 </nav>
 
 <div class="container-fluid">
-
     <div class="row">
-        <div class="col-md-3" style="padding-top:30px">
-
-            <a class="btn btn-primary" href="contents001.html" role="button">レポート新規作成</a>
-
-            <hr/>
-
-            <nav class="nav flex-column">
-                <a class="nav-link active" href="#">レポート一覧</a>
-                <a class="nav-link" href="#">レポート検索</a>
-            </nav>
-
-            <hr/>
-
-            <nav class="nav flex-column">
-                <a class="nav-link active" href="#">チュートリアル</a>
-                <a class="nav-link" href="#">よくあるFAQ</a>
-            </nav>
+        <div class="col-md-2" style="padding-top:30px;background:#272c33;">
+            <div class="row">
+                <div class="col-md-12">
+                    aaass<br/>
+                    <img src="https://avatars0.githubusercontent.com/u/27339320?s=400&u=a2a952b00c9605b4536552e8ee2c55b2bf35d6cb&v=4" alt="..." class="rounded" height="100px" width="100px">
+                </div>
+            </div>
+            <hr style="border:1px solid white;" />
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+            </div>
         </div>
 
+    <div class="col-md-10" id="app" style="background:#eeeeee;">
 
-        <div class="col-md-9" style="padding-top:30px">
-
+        <div v-for="result in results">
+            <div class="card">
+                <div class="card-divider">
+                    {{ result.programName }}
+                </div>
+                <div class="card-section">
+                    <p>{{ result.programId }}.</p>
+                </div>
+            </div>
         </div>
+
+        <hr/>
+
+        <div v-for="result in results">
+            <div class="card">
+                <div class="card-divider">
+                    {{ result.programName }}
+                </div>
+                <div class="card-section">
+                    <p>{{ result.programId }}.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
+    </div>
+
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <span>Copyright &copy; 2017-2018 t-zomu.com All Rights Reserved.</span>
-    </div>
-</footer>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -113,5 +106,12 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
         integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
         crossorigin="anonymous"></script>
+<!-- Vue.js -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<!-- Axios -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- Org JavaScript -->
+<script src="/herbu/modules/frontend-web/assets/js/app.js"></script>
+
 </body>
 </html>

@@ -129,6 +129,19 @@ paths:
       responses:
         200:
           description: 正常に編集された場合に返却します.
+  /education/programs/new:
+    get:
+      operationId: get_new_education_programs
+      summary: 新着教育プログラム
+      tags:
+        - Study
+      responses:
+        200:
+          description: 正常に新着教育プログラムが取得できた場合に返却します.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/SummaryProgram'
 definitions:
   UserRegist:
     type: object
@@ -253,6 +266,19 @@ definitions:
       - assessElementId
       - name
       - value
+  SummaryProgram:
+    type: object
+    description: プログラムサマリー
+    properties:
+      programId:
+        type: string
+        description:  プログラムID
+      programName:
+        type: string
+        description: プログラム名
+      categoryId:
+        type: string
+        description: カテゴリID
   Result:
     type: object
     properties:
