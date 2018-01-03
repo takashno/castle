@@ -3,7 +3,7 @@ rootProject.name = 'herbu'
 
 // Applications
 include 'modules:frontend-api'
-include 'modules:frontend-web'
+//include 'modules:frontend-web'
 include 'modules:database'
 
 // OpenApi

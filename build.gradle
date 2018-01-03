@@ -46,7 +46,7 @@ allprojects {
 }
 
 // サブプロジェクト共通設定
-configure(subprojects - project('docs') - project('mocks') - project('modules:frontend-web')) {
+configure(subprojects - project('docs') - project('mocks') /*- project('modules:frontend-web')*/) {
 
     // プラグイン定義
     apply plugin: 'java'
