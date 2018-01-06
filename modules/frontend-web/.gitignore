@@ -15,3 +15,6 @@ selenium-debug.log
 *.ntvs*
 *.njsproj
 *.sln
+
+# build directory is ignore on java project. but does not ignore javascript projects.
+!build
