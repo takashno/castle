@@ -1,5 +1,5 @@
 // Root
-rootProject.name = 'herbu'
+rootProject.name = 'castle'
 
 // Applications
 include 'modules:frontend-api'
