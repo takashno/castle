@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/home/Home'
-import NewReport from '@/components/training/NewReport'
+import Home from '@/components/pages/home/Home'
+import NewReport from '@/components/pages/training/NewReport'
 
 Vue.use(Router)
 

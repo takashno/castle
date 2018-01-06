@@ -15,7 +15,7 @@ Vue.config.productionTip = false
 
 const store = new Vuex.Store({
   state: {
-    menu: 'init'
+    menu: 'home'
   },
   mutations: {
     increment (state) {
@@ -30,5 +30,7 @@ new Vue({
   store,
   router,
   template: '<App/>',
-  components: { App }
+  components: {
+    App
+  }
 })
