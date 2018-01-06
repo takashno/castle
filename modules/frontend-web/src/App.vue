@@ -23,7 +23,7 @@
                 <div id="accordion">
                     <div class="card rounded-0 border-0" style="background:#17a2b8;">
                         <div class="card-header" role="tab" id="headingOne">
-                            <router-link to="/" style="text-decoration:none;color:white;">
+                            <router-link to="/" style="text-decoration:none;color:white;" v-if="activeMenu === 'home'">
                                 <i class="fas fa-home"></i>&nbsp;HOME
                             </router-link>
                         </div>

@@ -1,6 +1,6 @@
-package com.zomu.t.herbu.frontend.api.v100.server.control;
+package com.zomu.t.castle.frontend.api.v100.server.control;
 
-import com.zomu.t.herbu.frontend.api.v100.server.bean.SummaryProgram;
+import com.zomu.t.castle.frontend.api.v100.server.bean.SummaryProgram;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -9,10 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class StudyApiDelegateImpl implements StudyApiDelegate {
+public class LearningApiDelegateImpl implements LearningApiDelegate {
 
     @Override
-    public ResponseEntity<List<SummaryProgram>> getNewEducationPrograms() {
+    public ResponseEntity<List<SummaryProgram>> getNewLearningPrograms() {
         List<SummaryProgram> result = new ArrayList<>();
 
         // 1

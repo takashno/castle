@@ -97,6 +97,16 @@
                     </tbody>
                 </table>
                 <a class="btn btn-info" href="#" role="button">More...</a>
+                <div v-for="result in results">
+                    <div class="card">
+                        <div class="card-divider">
+                            {{ result.programName }}
+                        </div>
+                        <div class="card-section">
+                            <p>{{ result.programId }}.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -105,12 +115,19 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'Home',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  data: {
+    results: []
+  },
+  mounted () {
+    var config = {
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
     }
+    axios.get('http://localhost:8082/api/v1.0.0/learnings/programs/new', config)
+      .then(response => { this.results = response.data })
   }
 }
 </script>

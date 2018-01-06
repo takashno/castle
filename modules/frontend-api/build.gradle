@@ -52,4 +52,4 @@ task generateMyBatisCode(type: JavaExec) {
 }
 generateMyBatisCode.group = 'mybatis generator'
 
-compileJava.dependsOn ":swagger:frontend-api-server:generateSwaggerCode",":swagger:frontend-api-client:generateSwaggerCode"
+compileJava.dependsOn ":modules:swagger:frontend-api-server:generateSwaggerCode"

@@ -1,6 +1,6 @@
 {
-  "modelPackage": "com.zomu.t.herbu.frontend.api.v100.server.bean",
-  "apiPackage": "com.zomu.t.herbu.frontend.api.v100.server.control",
+  "modelPackage": "com.zomu.t.castle.frontend.api.v100.server.bean",
+  "apiPackage": "com.zomu.t.castle.frontend.api.v100.server.control",
   "hideGenerationTimestamp": false,
   "java8": true,
   "serializableModel": true,
