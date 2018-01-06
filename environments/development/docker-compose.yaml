@@ -18,7 +18,7 @@ services:
       - "3306:3306"
     hostname: dbserver
     environment:
-        MYSQL_DATABASE: herbudb
+        MYSQL_DATABASE: castledb
         MYSQL_ROOT_PASSWORD: password
     networks:
       - frontend

@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
-  title: Herbu
-  description: Herbuが提供するAPI仕様書
+  title: Castle
+  description: Castleが提供する各種API仕様.
   version: "1.0.0"
 host: herbu.t-zomu.com
 schemes:
@@ -15,12 +15,12 @@ tags :
     description: ユーザー.
   - name : Skill
     description: スキル.
-  - name : Study
-    description: 学習プログラム.
+  - name : Learning
+    description: 学習.
   - name : Knowledge
     description: ナレッジ.
-  - name : OJT
-    description: OJT.
+  - name : Training
+    description: トレーニング（OJT）.
 paths:
   /users:
     post:
@@ -111,14 +111,53 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Result'
-  /reports:
+  /skills/categories:
+    get:
+      operationId: get_skills_category
+      summary: スキルのカテゴリーを取得します.
+      description: |
+        クエリーパラメータによって特定のカテゴリーIDの検索を行うことができます.
+        クエリーパラメータを指定しない場合には、ルート階層のカテゴリーを返却します.
+        レスポンスの子カテゴリーはクエリーパラメータによってカテゴリーIDを指定した場合のみ返却します.
+        また、子カテゴリーは指定されてカテゴリーIDの子の階層まで取得します.それ以下の階層のカテゴリーは本APIを呼び出して随時取得すること.
+      tags:
+        - Skill
+      parameters:
+      - in: query
+        name: categoryId
+        type: string
+        description: カテゴリーID
+      responses:
+        200:
+          description: 正常
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Category'
+  /skills:
+    get:
+      operationId: get_skills
+      summary: スキルを取得します.
+      description: |
+        ああああ
+      tags:
+        - Skill
+      parameters:
+      - in: query
+        name: categoryId
+        type: string
+        description: カテゴリーID
+      responses:
+        200:
+          description: 正常
+  /trainings/reports:
     post:
       operationId : post_repotes
       summary: レポート新規作成
       description: |
         レポートを編集します.
       tags:
-        - OJT
+        - Training
       parameters:
       - in: body
         name: body
@@ -129,12 +168,12 @@ paths:
       responses:
         200:
           description: 正常に編集された場合に返却します.
-  /education/programs/new:
+  /learnings/programs/new:
     get:
-      operationId: get_new_education_programs
+      operationId: get_new_learning_programs
       summary: 新着教育プログラム
       tags:
-        - Study
+        - Learning
       responses:
         200:
           description: 正常に新着教育プログラムが取得できた場合に返却します.
@@ -193,6 +232,21 @@ definitions:
     required:
       - role
       - name
+  Category:
+    type: object
+    description: カテゴリー
+    properties:
+      categoryId:
+        type: string
+        description: カテゴリーID
+      categoryName:
+        type: string
+        description: カテゴリー名称
+      children:
+        type: array
+        description: 子カテゴリー
+        items:
+          $ref: '#/definitions/Category'
   Report:
     type: object
     description: レポート

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+          integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+
+    <title>Castle</title>
+</head>
+<body>
+
+<!-- ナビゲーションバー -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Herbu</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/herbu/mocks">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/herbu/mocks/pages/skill">Skill</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/herbu/mocks/pages/study">Study</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/herbu/mocks/pages/knowledge">Knowledge</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/herbu/mocks/pages/ojt">OJT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/herbu/mocks/pages/profile">Profile</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign&nbsp;In</button>
+        </form>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1" style="padding-top:30px;background:black;">
+            <!--
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="https://avatars0.githubusercontent.com/u/27339320?s=400&u=a2a952b00c9605b4536552e8ee2c55b2bf35d6cb&v=4"
+                         alt="..." class="rounded" height="100px" width="100px">
+                </div>
+            </div>
+            <hr style="border:1px solid white;"/>
+            -->
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="nav flex-column">
+                        <li class="nav-item" style="font-size:2.2em;">
+                            <a class="nav-link active" href="#"><i class="fas fa-home"></i></a>
+                        </li>
+                        <li class="nav-item" style="font-size:2.2em;">
+                            <a class="nav-link" href="#"><i class="fas fa-globe"></i></a>
+                        </li>
+                        <li class="nav-item" style="font-size:2.2em;">
+                            <a class="nav-link" href="#"><i class="fas fa-graduation-cap"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-11" style="background:#ebf6f7;">
+            <object data="http://backpaper0.github.io/ghosts/vue/" type="text/html" width="90%" height="800px"></object>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+</body>
+</html>

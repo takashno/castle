@@ -9,74 +9,260 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
           integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
-    <title>Herbu</title>
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+
+    <title>Castle</title>
+
+    <!-- とりあえずここに書いた -->
+    <style type="text/css">
+        .tooltip-inner {
+            max-width: 500px;
+            text-align: left;
+        }
+        .footer {
+            color: white;
+            background-color: gray;
+            padding-top:50px;
+            padding-bottom:50px;
+        }
+    </style>
+
 </head>
 <body>
 
-<!-- ナビゲーションバー -->
-<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Herbu</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<header>
+    <!-- ナビゲーションバー -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Castle</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/herbu/mocks">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/herbu/mocks/pages/skill">Skill</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/herbu/mocks/pages/study">Study</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/herbu/mocks/pages/knowledge">Knowledge</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/herbu/mocks/pages/ojt">OJT</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/herbu/mocks/pages/profile">Profile</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign&nbsp;In</button>
-        </form>
-    </div>
-</nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Sign&nbsp;In</button>
+            </form>
+        </div>
+    </nav>
+</header>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2" style="padding-top:30px;background:#272c33;">
-            <div class="row">
-                <div class="col-md-12">
-                    aaass<br/>
-                    <img src="https://avatars0.githubusercontent.com/u/27339320?s=400&u=a2a952b00c9605b4536552e8ee2c55b2bf35d6cb&v=4" alt="..." class="rounded" height="100px" width="100px">
+    <div class="row" style="height:100%;">
+        <aside class="col-md-2" style="padding:0px">
+            <div id="accordion">
+                <div class="card rounded-0 border-0" style="background:#17a2b8;">
+                    <div class="card-header" role="tab" id="headingOne">
+                        <a href="#collapseOne" style="text-decoration:none;color:white;">
+                            <i class="fas fa-home"></i>&nbsp;HOME
+                        </a>
+                    </div>
+                </div>
+                <div class="card rounded-0 border-0" style="background:white;">
+                    <div class="card-header" role="tab" id="headingTwo">
+                        <a href="#collapseTwo" style="text-decoration:none;">
+                            <i class="fas fa-user-circle"></i>&nbsp;Profile
+                        </a>
+                    </div>
+                </div>
+                <div class="card rounded-0 border-0" style="background:white;">
+                    <div class="card-header" role="tab" id="headingThree">
+                        <a class="collapsed" style="text-decoration:none;" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">
+                            <i class="fas fa-globe"></i>&nbsp;Skill
+                        </a>
+                    </div>
+                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-header" role="tab">
+                            <a href="#collapseThree" style="text-decoration:none;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-connectdevelop"></i>&nbsp;Map
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card rounded-0 border-0" style="background:white;">
+                    <div class="card-header" id="heading_study">
+                        <a class="collapsed" style="text-decoration:none;" data-toggle="collapse" href="#collapse_study" role="button" aria-expanded="false" aria-controls="collapse_study">
+                            <i class="fas fa-graduation-cap"></i>&nbsp;Study
+                        </a>
+                    </div>
+                    <div id="collapse_study" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-header" role="tab">
+                            <a href="#collapseThree" style="text-decoration:none;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-list"></i>&nbsp;Category
+                            </a>
+                        </div>
+                        <div class="card-header">
+                            <a href="#collapseThree" style="text-decoration:none;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt"></i>&nbsp;Attendance&nbsp;List
+                            </a>
+                        </div>
+                        <div class="card-header" role="tab">
+                            <a href="#collapseThree" style="text-decoration:none;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-question-circle"></i>&nbsp;QA&nbsp;List
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card rounded-0 border-0" style="background:white;">
+                    <div class="card-header" role="tab" id="heading_knowledge">
+                        <a class="collapsed" style="text-decoration:none;" data-toggle="collapse" href="#collapse_knowledge" role="button" aria-expanded="false" aria-controls="collapse_knowledge">
+                            <i class="fas fa-database"></i>&nbsp;Knowledge
+                        </a>
+                    </div>
+                    <div id="collapse_knowledge" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-header">
+                            <a href="#collapseThree" style="text-decoration:none;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-list"></i>&nbsp;Category
+                            </a>
+                        </div>
+                        <div class="card-header">
+                            <a href="#collapseThree" style="text-decoration:none;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-edit"></i>&nbsp;New&nbsp;Knowledge
+                            </a>
+                        </div>
+                        <div class="card-header" role="tab">
+                            <a href="#collapseThree" style="text-decoration:none;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-question-circle"></i>&nbsp;QA&nbsp;List
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card rounded-0 border-0" style="background:white;">
+                    <div class="card-header" id="heading_ojt">
+                        <a class="collapsed" style="text-decoration:none;" style="text-decoration:none;" data-toggle="collapse" href="#collapse_ojt" role="button" aria-expanded="false" aria-controls="collapse_ojt">
+                            <i class="fas fa-child"></i>&nbsp;OJT
+                        </a>
+                    </div>
+                    <div id="collapse_ojt" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-header">
+                            <a href="#collapseThree" style="text-decoration:none;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-edit"></i>&nbsp;New&nbsp;Report
+                            </a>
+                        </div>
+                        <div class="card-header" role="tab">
+                            <a href="#collapseThree" style="text-decoration:none;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-list"></i>&nbsp;Report&nbsp;List
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <hr style="border:1px solid white;" />
+        </aside>
+
+
+        <main class="col-md-10" style="padding:0px;border-left:1px solid gray;">
             <div class="row">
                 <div class="col-md-12">
-                    <ul class="list-group">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item active" aria-current="page">HOME</li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
-        </div>
+            <article class="row" style="padding: 30px 10px 30px 10px;">
+                <section class="col-md-12">
+                    <h4>New Study Program</h4>
+                    <div class="row">
+                        <div class="col">
+                            <table class="table table-sm table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Category</th>
+                                    <th>Tags</th>
+                                </tr>
 
-    <div class="col-md-10" style="background:red;">
-        Main Contents
-    </div>
-    </div>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><a href="#">ラムダ式</a></td>
+                                    <td>プログラミング</td>
+                                    <td>Java,Java8,Stream</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">サーバーレスアーキテクチャ</a></td>
+                                    <td>システム</td>
+                                    <td>AWS,Lambda,APIGateway</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="contents001.html">マイクロサービスアーキテクチャ</a></td>
+                                    <td>システム</td>
+                                    <td>REST,MSA,SpringBoot</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">DIコンテナ</a></td>
+                                    <td>フレームワーク</td>
+                                    <td>SpringFramework,DI</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">GCアルゴリズム</a></td>
+                                    <td>プログラミング</td>
+                                    <td>GC,Java,G1GC,CSMC</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <a class="btn btn-info" href="#" role="button">More...</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="col-md-12" style="margin-top:30px;">
+                    <h4>Popular Program</h4>
+                    <div class="row">
+                        <div class="col">
+                            <table class="table table-sm table-striped">
+                                <thead>
+                                <tr>
+                                    <th>プログラム</th>
+                                    <th>ジャンル</th>
+                                    <th>タグ</th>
+                                </tr>
 
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><a href="#">ラムダ式</a></td>
+                                    <td>プログラミング</td>
+                                    <td>Java,Java8,Stream</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">サーバーレスアーキテクチャ</a></td>
+                                    <td>システム</td>
+                                    <td>AWS,Lambda,APIGateway</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="contents001.html">マイクロサービスアーキテクチャ</a></td>
+                                    <td>システム</td>
+                                    <td>REST,MSA,SpringBoot</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">DIコンテナ</a></td>
+                                    <td>フレームワーク</td>
+                                    <td>SpringFramework,DI</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">GCアルゴリズム</a></td>
+                                    <td>プログラミング</td>
+                                    <td>GC,Java,G1GC,CSMC</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <a class="btn btn-info" href="#" role="button">More...</a>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </div>
 </div>
 
+<footer class="footer">
+    <div class="container">
+        <span>Copyright &copy; 2017-2018 t-zomu.com All Rights Reserved.</span>
+    </div>
+</footer>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -89,5 +275,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
         integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
         crossorigin="anonymous"></script>
+
 </body>
 </html>
