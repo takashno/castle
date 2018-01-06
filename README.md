@@ -1,2 +1,3 @@
-# herbu
-Human Enterprise Resource Base Utilization
+# Castle
+人材のスキル、学習、教育、ノウハウなどを統合管理するための自分のユーティリティ。
+これらは、現在の城っていってもいいのでは的な安易な中二病でCastle。
