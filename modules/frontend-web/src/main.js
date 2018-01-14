@@ -15,7 +15,8 @@ Vue.config.productionTip = false
 
 const store = new Vuex.Store({
   state: {
-    menu: 'home'
+    menu: 'home',
+    signin: false
   },
   mutations: {
     increment (state) {

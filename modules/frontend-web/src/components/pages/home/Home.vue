@@ -123,6 +123,9 @@ export default {
     results: []
   },
   mounted () {
+    // メニューのステータスを変更
+    this.$store.state.menu = 'home'
+
     var config = {
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
     }

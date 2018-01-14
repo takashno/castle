@@ -9,8 +9,11 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
               </ul>
-              <form class="form-inline my-2 my-lg-0">
+              <form class="form-inline my-2 my-lg-0" v-if="!$store.state.signin">
                   <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Sign&nbsp;In</button>
+              </form>
+              <form class="form-inline my-2 my-lg-0" v-if="$store.state.signin">
+                  <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Sign&nbsp;Out</button>
               </form>
           </div>
       </nav>

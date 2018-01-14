@@ -408,6 +408,9 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  mounted () {
+    this.$store.state.menu = 'training'
   }
 }
 </script>

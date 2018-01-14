@@ -2,7 +2,12 @@
 rootProject.name = 'castle'
 
 // Applications
-include 'modules:frontend-api'
+include 'modules:frontend-api:configserver-app'
+include 'modules:frontend-api:user-rest-app'
+include 'modules:frontend-api:skill-rest-app'
+include 'modules:frontend-api:learning-rest-app'
+include 'modules:frontend-api:knowledge-rest-app'
+include 'modules:frontend-api:training-rest-app'
 //include 'modules:frontend-web'
 include 'modules:database'
 
